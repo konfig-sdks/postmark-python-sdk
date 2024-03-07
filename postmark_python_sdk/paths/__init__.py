@@ -1,0 +1,46 @@
+# do not import all endpoints into this module because that uses a lot of memory and stack frames
+# if you need the ability to import all endpoints from this module, import them with
+# from postmark_python_sdk.apis.path_to_api import path_to_api
+
+import enum
+
+
+class PathValues(str, enum.Enum):
+    BOUNCES = "/bounces"
+    BOUNCES_BOUNCEID = "/bounces/{bounceid}"
+    BOUNCES_BOUNCEID_ACTIVATE = "/bounces/{bounceid}/activate"
+    BOUNCES_BOUNCEID_DUMP = "/bounces/{bounceid}/dump"
+    DELIVERYSTATS = "/deliverystats"
+    EMAIL = "/email"
+    EMAIL_BATCH = "/email/batch"
+    EMAIL_BATCH_WITH_TEMPLATES = "/email/batchWithTemplates"
+    EMAIL_WITH_TEMPLATE = "/email/withTemplate"
+    MESSAGES_INBOUND = "/messages/inbound"
+    MESSAGES_INBOUND_MESSAGEID_BYPASS = "/messages/inbound/{messageid}/bypass"
+    MESSAGES_INBOUND_MESSAGEID_DETAILS = "/messages/inbound/{messageid}/details"
+    MESSAGES_INBOUND_MESSAGEID_RETRY = "/messages/inbound/{messageid}/retry"
+    MESSAGES_OUTBOUND = "/messages/outbound"
+    MESSAGES_OUTBOUND_CLICKS = "/messages/outbound/clicks"
+    MESSAGES_OUTBOUND_CLICKS_MESSAGEID = "/messages/outbound/clicks/{messageid}"
+    MESSAGES_OUTBOUND_OPENS = "/messages/outbound/opens"
+    MESSAGES_OUTBOUND_OPENS_MESSAGEID = "/messages/outbound/opens/{messageid}"
+    MESSAGES_OUTBOUND_MESSAGEID_DETAILS = "/messages/outbound/{messageid}/details"
+    MESSAGES_OUTBOUND_MESSAGEID_DUMP = "/messages/outbound/{messageid}/dump"
+    SERVER = "/server"
+    STATS_OUTBOUND = "/stats/outbound"
+    STATS_OUTBOUND_BOUNCES = "/stats/outbound/bounces"
+    STATS_OUTBOUND_CLICKS = "/stats/outbound/clicks"
+    STATS_OUTBOUND_CLICKS_BROWSERFAMILIES = "/stats/outbound/clicks/browserfamilies"
+    STATS_OUTBOUND_CLICKS_LOCATION = "/stats/outbound/clicks/location"
+    STATS_OUTBOUND_CLICKS_PLATFORMS = "/stats/outbound/clicks/platforms"
+    STATS_OUTBOUND_OPENS = "/stats/outbound/opens"
+    STATS_OUTBOUND_OPENS_EMAILCLIENTS = "/stats/outbound/opens/emailclients"
+    STATS_OUTBOUND_OPENS_PLATFORMS = "/stats/outbound/opens/platforms"
+    STATS_OUTBOUND_SENDS = "/stats/outbound/sends"
+    STATS_OUTBOUND_SPAM = "/stats/outbound/spam"
+    STATS_OUTBOUND_TRACKED = "/stats/outbound/tracked"
+    TEMPLATES = "/templates"
+    TEMPLATES_VALIDATE = "/templates/validate"
+    TEMPLATES_TEMPLATE_ID_OR_ALIAS = "/templates/{templateIdOrAlias}"
+    TRIGGERS_INBOUNDRULES = "/triggers/inboundrules"
+    TRIGGERS_INBOUNDRULES_TRIGGERID = "/triggers/inboundrules/{triggerid}"
